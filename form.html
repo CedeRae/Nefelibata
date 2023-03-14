@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+    
+<lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width", intial-scale="1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Nefelibata</title>
+        <link href="style.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+    </head>
+</lang>
+
+<body>
+    <nav>
+        <!--<input type="checkbox" id="check">
+        <label for="check">
+            <i class="fa fa-bars" style="font-size:24px" id="open"></i>
+            <i class="fa fa-close" style="font-size:24px" id="close"></i>
+        </label>-->
+
+        <div id="nav-bar2">
+            <a href="index.html">Home</a>
+            <!--<a href="#">About us</a>-->
+        </div>
+    </nav>
+    
+    <header>
+        <h1>Book a photoshoot</h1>
+        <p>Fill out and submit this form and we will contact you within two to four business days. :)</p>
+    </header>  
+
+    <form action="#" method="POST">
+    <div class="event">
+        <h2>Event information</h2>
+        <label for="name">Individual or party name</label>
+        <input type="text" name="name" id="name">
+        <br>
+        <label for="group">How many people are in this group?</label>
+        <input type="number" name="group" id="group">
+        <br>
+        <label for="event">Event type</label>
+        <select id="event" name="event">
+            <option value="wedding">Wedding</option>
+            <option value="family">Family</option>
+            <option value="personal">Party</option>
+            <option value="business">Business</option>
+            <option value="other">Other</option>
+        </select>
+        <br>
+        <label for="info">Additional information: </label>
+        <br>
+        <textarea id="info" na="info" rows="10" cols="30"></textarea>
+        <br>
+    </div>
+    <div class="contact">
+        <h2>Contact information</h2>
+        <label for="email">Email address</label>
+        <input type="text" name="email" id="email">
+        <br>
+        <label for="number">Phone number</label>
+        <input type="text" name="number" id="number">
+        <br>
+        <label for="number-type">Type of contact</label>
+        <select id="number-type" name="number-type">
+            <option value="Mobile">Mobile</option>
+            <option value="Home">Home</option>
+            <option value="work">Work</option>
+            <option value="Fax">Fax</option>
+        </select>
+        <br>
+        <label for="number2">Back-up Phone number (optional)</label>
+        <input type="text" name="number" id="number2">
+        <br>
+        <label for="number-type">Type of contact</label>
+        <select id="number-type" name="number-type">
+            <option value="Mobile">Mobile</option>
+            <option value="Home">Home</option>
+            <option value="work">Work</option>
+            <option value="Fax">Fax</option>
+        </select>
+        <br>
+        <p>What's the best time to contact you?</p>
+        <input type="radio" name="time" id="morning" value="morning">
+        <label for="morning">Morning</label>
+        <input type="radio" name="time" id="afternoon" value="afternoon">
+        <label for="afternoon">Afternoon</label>
+        <input type="radio" name="time" id="evening" value="evening">
+        <label for="evening">Evening</label>
+        <br>
+    </div>
+    </form>
+    <br>
+    <input type="submit">
+</body>
+
+</html>

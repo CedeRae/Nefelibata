@@ -1,14 +1,30 @@
 body {
     color: rgb(87, 87, 87);
     background-color: rgb(252, 239, 223);
-    margin: 0px 5% 3% 5%;
+    margin: 0;
+    font-family: 'Quicksand', sans-serif;
+    margin: 0 5% 3% 5%;
 }
 
-h2 {
-    margin-top: 20px;
+/*Navigation elements*/
+
+/*Animation for mobile view*/
+label #open, 
+label #close {
+    float: right;
+    margin-right: 15px;
+    cursor: pointer;
+    display: none;
+    position: relative;
+    z-index: 1;
 }
 
-nav {
+#check {
+    display: none;
+}
+
+#nav-bar,
+#nav-bar2 {
     width: 30%;
     float: right;
     display: flex;
@@ -16,11 +32,12 @@ nav {
     justify-content: flex-end;
 }
 
-a {
+#nav-bar a,
+#nav-bar2 a {
     position: relative;
     color: rgb(87, 87, 87);
     text-decoration: none;
-    padding: 0 10px;
+    padding: 0 20px;
 }
 
 a:after {
@@ -38,9 +55,16 @@ a:hover:after {
     width: 100%;
 }
 
+
+/*Image grid*/
 img {
     height: 100%;
     width: 100%;
+}
+
+header {
+    margin-top: 40px;
+    width: 75%;
 }
 
 .grid {
@@ -72,4 +96,75 @@ img {
 
 .girlfriends2 {
     grid-column: span 2;
+}
+
+
+/*Styles specific to form.html*/
+form {
+    line-height: 2.8;
+}
+
+.event {
+    display: inline-block;
+    position: absolute;
+    padding: 1rem 1rem;
+    vertical-align: middle;
+    width: 50%;
+}
+
+.contact {
+    display: inline-block;
+    position: relative;
+    padding: 1rem 1rem;
+    vertical-align: middle;
+    width: 50%;
+    margin-left: 50%;
+}
+
+/*Mobile*/
+@media screen and (max-width: 600px) {
+
+    label #open {
+        display: block;
+    }
+    
+    #nav-bar {
+        position: fixed;
+        width: 50%;
+        height: 100%;
+        background-color: rgb(252, 239, 223);
+        right: -100%;
+        top: 0;
+        text-align: center;
+        flex-direction: column;
+        transition: all .5s;
+        justify-content: center;
+    }
+
+    #nav-bar a {
+        margin-top: 20px;
+    }
+
+    #check:checked ~ #nav-bar {
+        right: 0;
+    }
+
+    #check:checked ~ label #open {
+        display: none;
+    }
+
+    #check:checked ~ label #close {
+        display: block;
+    }
+
+    .event {
+        display: block;
+        position: relative;
+    }
+
+    .contact {
+        display: block;
+        position: relative;
+        margin-left: 0;
+    }
 }
